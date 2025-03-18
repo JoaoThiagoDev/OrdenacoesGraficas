@@ -47,12 +47,8 @@ public class Main extends EngineFrame {
         listaBubble = new ArrayList<>();
         listaMerge = new ArrayList<>();
 
-<<<<<<< HEAD
         tempoParaMudar = 1;
         // teste
-=======
-        tempoParaMudar = 0.5;
->>>>>>> e85abe59f1d44c116bf067498467391a8246827d
 
         copiarArray(listaSelection, arraySelection);
         copiarArray(listaInsertion, arrayInsertion);
@@ -118,11 +114,7 @@ public class Main extends EngineFrame {
                     y - array[i] * tamanhoPedaco,
                     largura,
                     array[i] * tamanhoPedaco,
-<<<<<<< HEAD
                     BLUE
-=======
-                    BLACK
->>>>>>> e85abe59f1d44c116bf067498467391a8246827d
             );
         }
 
@@ -154,13 +146,10 @@ public class Main extends EngineFrame {
                 int aux = array[j];
                 array[j] = array[j - 1];
                 array[j - 1] = aux;
-<<<<<<< HEAD
                 j -= 1;
                 copiarArray(listaInsertion, array);
-=======
                 copiarArray(listaInsertion, array);
                 j -= 1;
->>>>>>> e85abe59f1d44c116bf067498467391a8246827d
             }
 
         }
