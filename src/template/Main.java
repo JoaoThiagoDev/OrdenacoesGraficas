@@ -48,7 +48,6 @@ public class Main extends EngineFrame {
         listaMerge = new ArrayList<>();
 
         tempoParaMudar = 1;
-        // teste
 
         copiarArray(listaSelection, arraySelection);
         copiarArray(listaInsertion, arrayInsertion);
@@ -90,13 +89,13 @@ public class Main extends EngineFrame {
 
         drawText("Selection Sort", 10, 10, 25, BLACK);
         drawText("Insertion Sort", getScreenWidth() / 2 + 10, 10, 25, BLACK);
-        drawText("Bubble Sort", 10, getScreenHeight() / 2 + 10, 25, BLACK);
-        drawText("Merge Sort", getScreenWidth() / 2 + 10, getScreenHeight() / 2 + 10, 25, BLACK);
+        drawText("Bubble Sort", 10, getScreenHeight() / 2 + 20, 25, BLACK);
+        drawText("Merge Sort", getScreenWidth() / 2 + 10, getScreenHeight() / 2 + 20, 25, BLACK);
 
-        desenharArray(listaSelection.get(posSelection), 10, getScreenHeight() / 2 - 25, 30, 10, 10);
-        desenharArray(listaInsertion.get(posInsertion), getScreenWidth() / 2 + 10, getScreenHeight() / 2 - 25, 30, 10, 10);
-        desenharArray(listaBubble.get(posBubble), 10, getScreenHeight() - 10, 30, 10, 10);
-        desenharArray(listaMerge.get(posMerge), getScreenWidth() / 2 + 10, getScreenHeight() - 10, 30, 10, 10);
+        desenharArray(listaSelection.get(posSelection), 10, getScreenHeight() / 2 - 25, 30, 15, 10);
+        desenharArray(listaInsertion.get(posInsertion), getScreenWidth() / 2 + 10, getScreenHeight() / 2 - 25, 30, 15, 10);
+        desenharArray(listaBubble.get(posBubble), 10, getScreenHeight() - 30, 30, 15, 10);
+        desenharArray(listaMerge.get(posMerge), getScreenWidth() / 2 + 10, getScreenHeight() - 30, 30, 15, 10);
 
     }
 
@@ -116,6 +115,7 @@ public class Main extends EngineFrame {
                     array[i] * tamanhoPedaco,
                     BLUE
             );
+            drawText(Integer.toString(array[i]), x + i * (largura + espacamento) + tamanhoPedaco, y+10, 15, BLUE );
         }
 
     }
@@ -148,8 +148,6 @@ public class Main extends EngineFrame {
                 array[j - 1] = aux;
                 j -= 1;
                 copiarArray(listaInsertion, array);
-                copiarArray(listaInsertion, array);
-                j -= 1;
             }
 
         }
@@ -163,7 +161,6 @@ public class Main extends EngineFrame {
             for (j = 0; j < arr.length - i - 1; j++) {
                 if (arr[j] > arr[j + 1]) {
 
-                    // Swap arr[j] and arr[j+1]
                     temp = arr[j];
                     arr[j] = arr[j + 1];
                     arr[j + 1] = temp;
@@ -172,8 +169,6 @@ public class Main extends EngineFrame {
                 }
             }
 
-            // If no two elements were
-            // swapped by inner loop, then break
             if (swapped == false) {
                 break;
             }
